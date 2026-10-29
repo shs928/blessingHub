@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>Blessing Hub 更新</title><link>https://blessingshs.cc.cd</link><description>让好工具与好知识相遇</description><language>zh-CN</language>
+<atom:link href="https://blessingshs.cc.cd/feed.xml" rel="self" type="application/rss+xml"/>
+<item><title>Blessing Hub，从这里开始</title><link>https://blessingshs.cc.cd/about</link><description>项目导航、站内搜索、浏览器收藏、入门指南与学习整理清单现已加入。</description><guid isPermaLink="false">blessing-hub-2026-10-29-0</guid><pubDate>Thu, 29 Oct 2026 04:00:00 GMT</pubDate></item>
+<item><title>Sub2API 加入项目导航</title><link>https://blessingshs.cc.cd/projects</link><description>通过 Blessing Hub 快速前往现有 AI API 服务。</description><guid isPermaLink="false">blessing-hub-2026-10-29-1</guid><pubDate>Thu, 29 Oct 2026 04:00:00 GMT</pubDate></item>
+</channel></rss>

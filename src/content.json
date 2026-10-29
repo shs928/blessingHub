@@ -1,0 +1,121 @@
+{
+  "site": {
+    "name": "Blessing Hub",
+    "url": "https://blessingshs.cc.cd",
+    "tagline": "让好工具与好知识相遇",
+    "releaseDate": "2026-10-29"
+  },
+  "projects": [
+    {
+      "id": "sub2api",
+      "name": "Sub2API",
+      "eyebrow": "AI API GATEWAY",
+      "description": "你的 AI API 服务入口。前往独立站点，查看可用服务、账户与使用信息。",
+      "url": "https://api.blessingshs.cc.cd",
+      "category": "AI 工具",
+      "tags": ["AI", "API", "开发者工具"],
+      "status": "available",
+      "featured": true,
+      "detail": "Sub2API 是目前已接入 Blessing Hub 的项目。点击访问后将在新标签页打开独立的 API 服务站点。服务的模型、价格和使用规则请以项目站内的最新说明为准。"
+    }
+  ],
+  "resources": [
+    {
+      "id": "getting-started",
+      "title": "第一次来？从这里开始",
+      "description": "一份简短的逛站指南，找到项目、收藏入口与后续更新。",
+      "category": "使用指南",
+      "type": "在线阅读",
+      "icon": "compass",
+      "date": "2026-10-29",
+      "sections": [
+        {
+          "heading": "一个入口，连接所有探索",
+          "body": "Blessing Hub 把我的项目、学习资料与未来课程放在一起。首页可以快速了解目前有什么，项目页面则集中展示可以直接访问的服务。"
+        },
+        {
+          "heading": "先从一个好用的项目开始",
+          "body": "目前可以访问 Sub2API。点击项目卡片中的「访问项目」会打开它的独立站点；项目的账户、服务说明和使用信息都在对应站点中管理。"
+        },
+        {
+          "heading": "把常用入口留在手边",
+          "body": "点击卡片右上角的书签图标，可以把项目加入「我的收藏」。收藏与主题设置保存在当前浏览器，不需要注册账号，也不会同步到其他设备。"
+        },
+        {
+          "heading": "关注正在生长的内容",
+          "body": "学习资料和课程会逐步加入。筹备中的内容会清楚标记状态。你可以订阅本站的 RSS，在自己常用的阅读器中关注后续更新。"
+        }
+      ]
+    },
+    {
+      "id": "learning-checklist",
+      "title": "把收藏变成行动：学习整理清单",
+      "description": "一份可下载的 Markdown 清单，让好资料真正进入你的学习计划。",
+      "category": "实用清单",
+      "type": "免费下载",
+      "icon": "file",
+      "download": "/downloads/learning-checklist.md",
+      "date": "2026-10-29",
+      "sections": [
+        {
+          "heading": "给每份收藏一个用途",
+          "body": "收藏之前，写下一句话：这份资料能帮助我解决什么问题？如果暂时回答不上来，可以先放入待整理列表，避免把收藏本身当成学习。"
+        },
+        {
+          "heading": "从一个小任务开始",
+          "body": "把「学会一个主题」改成一个能完成的小动作：读完一节内容、写下一个例子，或使用工具解决一次真实问题。给它预留一个具体时间。"
+        },
+        {
+          "heading": "留下自己的输出",
+          "body": "读完后，用自己的话写下三个要点，再记录一个仍然不清楚的问题。下一次打开这份资料时，从问题开始，而不是重新从第一页开始。"
+        },
+        {
+          "heading": "每周整理一次",
+          "body": "保留正在使用的资料，归档已经完成的内容，移除不再需要的收藏。下面的 Markdown 清单可以下载到本地，用你习惯的笔记工具继续编辑。"
+        }
+      ]
+    }
+  ],
+  "plans": [
+    {
+      "id": "ai-practice",
+      "title": "AI 工具与实践",
+      "description": "从工具使用到实际应用，整理可跟着做的实践内容。",
+      "icon": "sparkles",
+      "category": "AI 实践",
+      "status": "内容筹备中"
+    },
+    {
+      "id": "building-web",
+      "title": "从想法到网站",
+      "description": "记录项目搭建过程，逐步整理成可复用的学习资料。",
+      "icon": "code",
+      "category": "开发学习",
+      "status": "内容筹备中"
+    },
+    {
+      "id": "learning-system",
+      "title": "构建自己的学习系统",
+      "description": "围绕资料整理、知识记录与持续输出，规划学习路径。",
+      "icon": "book",
+      "category": "成长方法",
+      "status": "内容筹备中"
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-10-29",
+      "label": "网站更新",
+      "title": "Blessing Hub，从这里开始",
+      "description": "项目导航、站内搜索、浏览器收藏、入门指南与学习整理清单现已加入。",
+      "href": "/about"
+    },
+    {
+      "date": "2026-10-29",
+      "label": "项目收录",
+      "title": "Sub2API 加入项目导航",
+      "description": "通过 Blessing Hub 快速前往现有 AI API 服务。",
+      "href": "/projects"
+    }
+  ]
+}

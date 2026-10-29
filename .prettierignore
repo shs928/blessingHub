@@ -1,0 +1,5 @@
+node_modules
+dist
+.prerender
+public/feed.xml
+package-lock.json

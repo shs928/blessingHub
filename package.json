@@ -1,0 +1,25 @@
+{
+  "name": "blessing-hub",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir .prerender && node scripts/prerender.mjs && node scripts/generate-feeds.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "format": "prettier --write src scripts/*.mjs index.html package.json tsconfig.json vite.config.ts README.md"
+  },
+  "dependencies": {
+    "lucide-react": "^1.64.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "prettier": "^3.9.10",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}
