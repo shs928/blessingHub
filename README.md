@@ -4,6 +4,8 @@
 
 生产域名：[blessingshs.cc.cd](https://blessingshs.cc.cd/)
 
+代码仓库：[shs928/blessingHub](https://github.com/shs928/blessingHub)
+
 ![Blessing Hub 首页](docs/home-preview.png)
 
 ## 本地使用
@@ -89,21 +91,21 @@ systemctl reload nginx
 
 ## 域名与 Cloudflare
 
-Cloudflare 中的主域名 A 记录已配置为 `119.45.123.248`，并开启代理。源站在 443、8443 上都可接收 TLS 请求；当前公网验证中，默认 443 回源出现 525，而显式使用 8443 返回 200。
+Cloudflare 中的主域名 A 记录已配置为 `119.45.123.248`，并开启代理。生产 HTTPS 使用 8443 回源，保留当前 Full 加密模式；主站和现有 API 已通过公网 HTTPS 检查。
 
-主域名的回源规则需要使用以下设置，并在控制台部署后验证公网 HTTPS：
+主域名的独立回源规则已在控制台部署，配置如下：
 
-| 项目         | 设置                               |
-| ------------ | ---------------------------------- |
-| DNS          | A `@` → `119.45.123.248`，已代理   |
-| SSL/TLS 模式 | Full（完全），已在控制台确认       |
-| 规则匹配     | `http.host eq "blessingshs.cc.cd"` |
-| 目标端口     | `8443`                             |
+| 项目         | 设置                                         |
+| ------------ | -------------------------------------------- |
+| DNS          | A `@` → `119.45.123.248`，已代理             |
+| SSL/TLS 模式 | Full（完全），已在控制台确认                 |
+| 规则匹配     | `(http.host eq "blessingshs.cc.cd" and ssl)` |
+| 目标端口     | `8443`                                       |
 
 - 回源规则仅匹配主域名，现有 API 的规则保持独立。
 - `www` 尚未配置 DNS；如果需要，可添加指向主域名的代理 CNAME。
 - 现有源站使用自签名证书，当前模板沿用现有 **Full** 模式。切换 **Full (strict)** 前，需要先安装覆盖主域名的有效证书或 Cloudflare Origin Certificate。
-- 配置完成后验证 HTTPS 首页、文章、下载、RSS 和原 API 子域名。
+- 回源规则名称：`Blessing Hub HTTPS origin 8443`。修改相关配置后，应验证 HTTPS 首页、文章、下载、RSS 和原 API 子域名。
 
 ## 后续扩展
 
