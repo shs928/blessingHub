@@ -17,6 +17,7 @@ import {
   ExternalLink,
   FileText,
   FolderOpen,
+  Gamepad2,
   GraduationCap,
   Grid2X2,
   Menu,
@@ -44,7 +45,11 @@ const icons: Record<string, LucideIcon> = {
   sparkles: Sparkles,
   code: Code2,
   book: BookOpen,
+  gamepad: Gamepad2,
+  terminal: Terminal,
 }
+const featuredProjects = content.projects.filter((project) => project.featured)
+const [latestUpdate] = content.updates
 const navigation: { id: View; label: string; icon: LucideIcon }[] = [
   { id: 'home', label: '发现首页', icon: Compass },
   { id: 'projects', label: '所有项目', icon: Grid2X2 },
@@ -242,11 +247,12 @@ export function App({ initialRoute }: { initialRoute?: string }) {
 
   function ProjectCard({ project }: { project: Project }) {
     const saved = favorites.includes(project.id)
+    const Icon = icons[project.icon] || Terminal
     return (
       <article className="project-card">
         <div className="project-card-top">
           <span className="project-icon">
-            <Terminal size={25} strokeWidth={1.8} />
+            <Icon size={25} strokeWidth={1.8} />
           </span>
           <button
             className={`icon-button bookmark-button ${saved ? 'saved' : ''}`}
@@ -627,30 +633,30 @@ export function App({ initialRoute }: { initialRoute?: string }) {
                   </a>
                 </div>
                 <div className="home-project-grid">
-                  {content.projects
-                    .filter((project) => project.featured)
-                    .map((project) => (
-                      <ProjectCard key={project.id} project={project} />
-                    ))}
-                  <div className="next-project">
-                    <div className="next-project-art">
-                      <span />
-                      <Plus size={27} strokeWidth={1.4} />
-                      <span />
+                  {featuredProjects.map((project) => (
+                    <ProjectCard key={project.id} project={project} />
+                  ))}
+                  {featuredProjects.length === 1 && (
+                    <div className="next-project">
+                      <div className="next-project-art">
+                        <span />
+                        <Plus size={27} strokeWidth={1.4} />
+                        <span />
+                      </div>
+                      <span className="eyebrow">THE NEXT CHAPTER</span>
+                      <h3>下一个好想法，正在路上。</h3>
+                      <p>
+                        这里会不断加入新的项目。
+                        <br />
+                        保持好奇，下次见面多一点惊喜。
+                      </p>
+                      <button className="text-link" onClick={() => setRssOpen(true)}>
+                        关注后续更新
+                        <ArrowUpRight size={16} />
+                      </button>
+                      <span className="next-project-number">02</span>
                     </div>
-                    <span className="eyebrow">THE NEXT CHAPTER</span>
-                    <h3>下一个好想法，正在路上。</h3>
-                    <p>
-                      这里会不断加入新的项目。
-                      <br />
-                      保持好奇，下次见面多一点惊喜。
-                    </p>
-                    <button className="text-link" onClick={() => setRssOpen(true)}>
-                      关注后续更新
-                      <ArrowUpRight size={16} />
-                    </button>
-                    <span className="next-project-number">02</span>
-                  </div>
+                  )}
                 </div>
               </section>
 
@@ -695,9 +701,11 @@ export function App({ initialRoute }: { initialRoute?: string }) {
                   <h3>小站新鲜事</h3>
                   <span className="update-version">V1.0</span>
                 </div>
-                <a href="/about">
-                  <span className="update-date">10.29</span>
-                  <span>Blessing Hub 上线，新的连接从这里开始。</span>
+                <a href={latestUpdate.href}>
+                  <span className="update-date">
+                    {latestUpdate.date.slice(5).replace('-', '.')}
+                  </span>
+                  <span>{latestUpdate.title}</span>
                   <ArrowRight size={16} />
                 </a>
               </section>
@@ -1013,7 +1021,7 @@ export function App({ initialRoute }: { initialRoute?: string }) {
                   </button>
                 </div>
                 {content.updates.map((update) => (
-                  <div className="changelog-item" key={update.title}>
+                  <div className="changelog-item" key={update.id}>
                     <time>{update.date.replaceAll('-', '.')}</time>
                     <div>
                       <span className="pill">{update.label}</span>
@@ -1059,7 +1067,7 @@ export function App({ initialRoute }: { initialRoute?: string }) {
         <Modal onClose={() => setDetail(null)} label={`${detail.name} 项目详情`}>
           <div className="detail-top">
             <span className="project-icon">
-              <Terminal size={28} />
+              {React.createElement(icons[detail.icon] || Terminal, { size: 28 })}
             </span>
             <button className="icon-button" aria-label="关闭详情" onClick={() => setDetail(null)}>
               <X size={21} />
@@ -1172,7 +1180,7 @@ function SearchModal({ onClose }: { onClose: () => void }) {
         description: `${project.description} ${project.tags.join(' ')}`,
         label: '项目',
         href: '/projects',
-        icon: Terminal,
+        icon: icons[project.icon] || Terminal,
       })),
       ...content.resources.map((resource) => ({
         title: resource.title,

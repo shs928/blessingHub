@@ -13,10 +13,24 @@
       "description": "你的 AI API 服务入口。前往独立站点，查看可用服务、账户与使用信息。",
       "url": "https://api.blessingshs.cc.cd",
       "category": "AI 工具",
+      "icon": "terminal",
       "tags": ["AI", "API", "开发者工具"],
       "status": "available",
       "featured": true,
       "detail": "Sub2API 是目前已接入 Blessing Hub 的项目。点击访问后将在新标签页打开独立的 API 服务站点。服务的模型、价格和使用规则请以项目站内的最新说明为准。"
+    },
+    {
+      "id": "wangguodazuozhan",
+      "name": "王国大作战",
+      "eyebrow": "GAME TOOL",
+      "description": "凭兑换码选择所需能力，生成绑定设备的游戏内命令。",
+      "url": "https://wgdzz.blessingshs.cc.cd/",
+      "category": "游戏工具",
+      "icon": "gamepad",
+      "tags": ["辅助脚本", "命令生成", "兑换码"],
+      "status": "available",
+      "featured": true,
+      "detail": "这是《王国大作战》的辅助命令生成器。打开项目后，验证管理员发放的兑换码，填写游戏内查到的设备 ID 并选择能力，即可复制生成的命令到游戏内使用。"
     }
   ],
   "resources": [
@@ -35,7 +49,7 @@
         },
         {
           "heading": "先从一个好用的项目开始",
-          "body": "目前可以访问 Sub2API。点击项目卡片中的「访问项目」会打开它的独立站点；项目的账户、服务说明和使用信息都在对应站点中管理。"
+          "body": "在「所有项目」可以按类别找到 AI 服务和游戏工具。点击卡片中的「访问项目」会打开对应站点，使用方式和所需授权请以项目站内的说明为准。"
         },
         {
           "heading": "把常用入口留在手边",
@@ -104,6 +118,15 @@
   ],
   "updates": [
     {
+      "id": "2026-11-06-wangguodazuozhan",
+      "date": "2026-11-06",
+      "label": "项目收录",
+      "title": "王国大作战加入项目导航",
+      "description": "在首页或项目列表可以打开《王国大作战》辅助命令生成器。",
+      "href": "/projects"
+    },
+    {
+      "id": "2026-10-29-0",
       "date": "2026-10-29",
       "label": "网站更新",
       "title": "Blessing Hub，从这里开始",
@@ -111,6 +134,7 @@
       "href": "/about"
     },
     {
+      "id": "2026-10-29-1",
       "date": "2026-10-29",
       "label": "项目收录",
       "title": "Sub2API 加入项目导航",

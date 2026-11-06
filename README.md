@@ -50,6 +50,8 @@ npm run preview
 
 首页、导航数量、分类、搜索和订阅源从同一份内容生成。新项目使用唯一 `id`，提供完整 HTTPS 地址；将 `featured` 设置为 `true` 可显示在首页。
 
+更新记录按新到旧排列。每条记录的 `id` 也用于 RSS，请为新记录指定唯一值，并保留旧记录的 `id`。
+
 下载文件放入 `public/downloads/`，在资料的 `download` 字段填写 `/downloads/文件名`。新增文章会自动生成 `/resources/<id>/index.html`。
 
 站点样式位于 `src/styles.css`，主要界面在 `src/main.tsx`。`scripts/prerender.mjs` 生成页面，`scripts/generate-feeds.mjs` 生成 RSS。
