@@ -3,9 +3,22 @@
     "name": "Blessing Hub",
     "url": "https://blessingshs.cc.cd",
     "tagline": "让好工具与好知识相遇",
-    "releaseDate": "2026-10-29"
+    "releaseDate": "2026-11-11"
   },
   "projects": [
+    {
+      "id": "chinese-history",
+      "name": "中华历史",
+      "eyebrow": "HISTORY & CULTURE",
+      "description": "在山河之间读懂中华千年。探索历史疆域、帝王谱系、思想、诗词、工艺与神话。",
+      "url": "https://history.blessingshs.cc.cd/",
+      "category": "知识探索",
+      "icon": "book",
+      "tags": ["历史地图", "国学", "交互学习"],
+      "status": "available",
+      "featured": true,
+      "detail": "中华历史将中国历史图谱的五个知识板块与江山时序交互地图整合到同一站点。可以拖动年份查看历代疆域、查询古今地名与人物行迹，也可以浏览帝王谱系、思想经典、诗词、古代工艺与神话图鉴。界面与 Blessing Hub 统一，支持手机与深浅主题；史图为示意性近似，来源与许可见站内开源致谢。"
+    },
     {
       "id": "sub2api",
       "name": "Sub2API",
@@ -31,6 +44,19 @@
       "status": "available",
       "featured": true,
       "detail": "这是《王国大作战》的辅助命令生成器。打开项目后，验证管理员发放的兑换码，填写游戏内查到的设备 ID 并选择能力，即可复制生成的命令到游戏内使用。"
+    },
+    {
+      "id": "ember-tavern",
+      "name": "余烬酒馆",
+      "eyebrow": "AI ROLEPLAY",
+      "description": "选择角色、编写世界书，用 AI 对话续写你的故事。访客可先体验演示回复。",
+      "url": "https://bar.blessingshs.cc.cd",
+      "category": "AI 角色扮演",
+      "icon": "sparkles",
+      "tags": ["AI", "角色扮演", "世界书"],
+      "status": "available",
+      "featured": true,
+      "detail": "余烬酒馆（Ember Tavern）是一个本地优先的 AI 角色扮演聊天应用。访客可体验本地演示回复，登录后可通过服务端配置的真实模型继续对话。支持编辑和导入导出角色卡、使用世界书补充背景设定；角色、会话、消息与世界书按账号隔离保存在当前浏览器，不跨设备同步。"
     }
   ],
   "resources": [
@@ -117,6 +143,22 @@
     }
   ],
   "updates": [
+    {
+      "id": "2026-11-11-chinese-history",
+      "date": "2026-11-11",
+      "label": "项目收录",
+      "title": "中华历史：让知识与山河相遇",
+      "description": "历史图谱与江山时序地图汇入同一站点，从一个年代、一位人物或一座古城开始探索。",
+      "href": "/projects"
+    },
+    {
+      "id": "2026-11-10-ember-tavern",
+      "date": "2026-11-10",
+      "label": "项目收录",
+      "title": "余烬酒馆加入项目导航",
+      "description": "从首页或项目列表打开 Ember Tavern，体验角色扮演对话、角色卡与世界书。",
+      "href": "/projects"
+    },
     {
       "id": "2026-11-06-wangguodazuozhan",
       "date": "2026-11-06",

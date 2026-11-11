@@ -56,6 +56,22 @@ npm run preview
 
 站点样式位于 `src/styles.css`，主要界面在 `src/main.tsx`。`scripts/prerender.mjs` 生成页面，`scripts/generate-feeds.mjs` 生成 RSS。
 
+## 余烬酒馆接入
+
+余烬酒馆（Ember Tavern）的独立入口为 [bar.blessingshs.cc.cd](https://bar.blessingshs.cc.cd)。项目在 `src/content.json` 中使用 `ember-tavern` 作为 ID，归入「AI 角色扮演」分类并显示在首页；2026-11-10 的收录动态会随构建进入 RSS。
+
+酒馆支持访客本地演示、登录后使用服务端配置的真实模型，以及角色卡和世界书。角色、会话、消息与世界书按账号隔离保存在当前浏览器，不跨设备同步。Hub 提供项目导航，酒馆应用由独立站点运行。
+
+发布时先按相邻 `bar` 仓库的部署说明启动酒馆并验证 `/api/health`，再发布 Hub 静态版本，确保新入口指向可用服务。2026-11-10 已发布酒馆与 Hub 新入口，并在 Cloudflare 配置 `bar` 的代理 A 记录、HTTPS 回源 `8443` 和 `/api/*` 绕过缓存；Hub 的部署脚本不会启动酒馆后端。
+
+## 中华历史接入
+
+中华历史入口为 [history.blessingshs.cc.cd](https://history.blessingshs.cc.cd/)，在首页与「知识探索」分类中展示。源码仓库为 [shs928/chinese-histroy](https://github.com/shs928/chinese-histroy)，本地目录为相邻 `chinese-history-atlas`：保留历史图谱的五个知识板块，加入本地江山时序地图，并统一 Hub 主题与手机导航。
+
+历史站通过独立的 `/var/www/blessing-history/current` 与 `blessing-history.conf` 提供静态文件。Cloudflare 的 `history` A 记录已开启代理，独立 HTTPS 回源规则使用 8443。地图已排除上游明确禁止再分发的郡州府细边界，保留可复用的疆域、一级政区、地名与人物路线；来源、许可和对应源码下载均在历史站中提供。
+
+2026-11-11 已发布历史站与 Hub 导航入口，具体构建、版本切换和源码说明见历史站的 `DEPLOYMENT.md`。Hub 部署脚本不会重新发布历史站。
+
 ## 服务器部署
 
 服务器：`119.45.123.248`。本项目不保存 SSH 密码或 Cloudflare 凭据；通过终端提示输入密码，或使用自己配置的 SSH 密钥。
