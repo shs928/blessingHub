@@ -109,6 +109,23 @@ nginx -t
 systemctl reload nginx
 ```
 
+## 2026-11-12 API 品牌同步发布
+
+发布编号 `20261112T125210Z`，功能源码 `116230508ff9646b170692fec588ab37f7c42b63`，已部署到 [Blessing Hub](https://blessingshs.cc.cd/)。
+
+- 项目卡片、详情、搜索、RSS、页面元信息和无 JavaScript 提示统一使用 Blessing API；介绍密钥管理、接入指南、用量与余额查询及 1／5／10／20／50 元卡密充值。
+- 项目标识改为 `blessing-api`，兼容旧浏览器收藏并去重。构建、TypeScript、9 页预渲染、RSS 生成与 4 项收藏兼容检查通过；生成的 HTML/XML 已检查无旧品牌名称。
+- 生产目录：`/var/www/blessing-hub/releases/20261112T125210Z`；入口 HTML SHA256：`9aaa6918525ddb9431ed11fdaf0648fbcc391c1f13d0bc4681266be64ad0e570`。
+- Hub Nginx 配置保持一致，原子切换静态版本，保留旧版本和旧哈希资源；源站页面、RSS、下载、静态资源和 404 检查通过。
+- Blessing API 同期使用生产兼容构建发布到相同编号，API 后端容器和启动时间保持一致。
+- 从服务器经公网 HTTPS 检查两个站点共 23 项，页面、RSS、下载、图标、入口脚本和公开设置均通过；图标与资源哈希匹配发布文件。酒馆与历史站首页内容哈希与发布前一致。
+
+备份目录为 `/var/www/blessing-hub/backups/20261112T125210Z`，含旧版本信息、配置副本和受当前版本检查保护的回滚脚本：
+
+```sh
+sudo sh /var/www/blessing-hub/backups/20261112T125210Z/rollback.sh
+```
+
 ## 域名与 Cloudflare
 
 Cloudflare 中的主域名 A 记录已配置为 `119.45.123.248`，并开启代理。生产 HTTPS 使用 8443 回源，保留当前 Full 加密模式；主站和现有 API 已通过公网 HTTPS 检查。
