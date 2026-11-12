@@ -68,10 +68,16 @@ function initialFavorites(): string[] {
   try {
     const value: unknown = JSON.parse(storageGet('blessing-favorites') || '[]')
     return Array.isArray(value)
-      ? value.filter(
-          (id): id is string =>
-            typeof id === 'string' && content.projects.some((project) => project.id === id),
-        )
+      ? [
+          ...new Set(
+            value
+              .map((id) => (id === 'sub2api' ? 'blessing-api' : id))
+              .filter(
+                (id): id is string =>
+                  typeof id === 'string' && content.projects.some((project) => project.id === id),
+              ),
+          ),
+        ]
       : []
   } catch {
     return []

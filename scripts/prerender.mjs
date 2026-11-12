@@ -20,7 +20,8 @@ const pages = [
   {
     path: 'projects',
     title: '所有项目 · Blessing Hub',
-    description: '在 Blessing Hub 发现我的项目与实用工具，快速访问 Sub2API 等独立项目。',
+    description:
+      '在 Blessing Hub 发现我的项目与实用工具，快速访问 Blessing API、中华历史和余烬酒馆等独立项目。',
   },
   {
     path: 'resources',

@@ -38,6 +38,8 @@ npm run preview
 
 ## 维护内容
 
+API 项目统一使用 **Blessing API**：提供 API 密钥管理、接入指引、用量与余额查询，以及 1／5／10／20／50 元卡密充值。入口为 [api.blessingshs.cc.cd](https://api.blessingshs.cc.cd/)。项目标识为 `blessing-api`，浏览器中旧标识的收藏会自动兼容；项目卡片、详情、搜索和 RSS 使用同一份内容。
+
 主要修改 `src/content.json`：
 
 | 字段        | 用途                                 |

@@ -3,7 +3,7 @@
     "name": "Blessing Hub",
     "url": "https://blessingshs.cc.cd",
     "tagline": "让好工具与好知识相遇",
-    "releaseDate": "2026-11-11"
+    "releaseDate": "2026-11-12"
   },
   "projects": [
     {
@@ -20,17 +20,17 @@
       "detail": "中华历史将中国历史图谱的五个知识板块与江山时序交互地图整合到同一站点。可以拖动年份查看历代疆域、查询古今地名与人物行迹，也可以浏览帝王谱系、思想经典、诗词、古代工艺与神话图鉴。界面与 Blessing Hub 统一，支持手机与深浅主题；史图为示意性近似，来源与许可见站内开源致谢。"
     },
     {
-      "id": "sub2api",
-      "name": "Sub2API",
-      "eyebrow": "AI API GATEWAY",
-      "description": "你的 AI API 服务入口。前往独立站点，查看可用服务、账户与使用信息。",
+      "id": "blessing-api",
+      "name": "Blessing API",
+      "eyebrow": "AI API WORKSPACE",
+      "description": "管理 AI API 密钥、查看用量与余额，按接入指南连接常用工具，购买卡密即可兑换平台额度。",
       "url": "https://api.blessingshs.cc.cd",
       "category": "AI 工具",
       "icon": "terminal",
-      "tags": ["AI", "API", "开发者工具"],
+      "tags": ["AI API", "密钥管理", "卡密充值"],
       "status": "available",
       "featured": true,
-      "detail": "Sub2API 是目前已接入 Blessing Hub 的项目。点击访问后将在新标签页打开独立的 API 服务站点。服务的模型、价格和使用规则请以项目站内的最新说明为准。"
+      "detail": "Blessing API 是 Blessing Hub 的 AI API 服务。你可以创建和管理 API 密钥、查看用量与余额，并按接入指南连接 OpenAI 兼容或 Anthropic 协议的客户端。支持 1／5／10／20／50 元卡密，按 1 元人民币兑换 $1 平台额度；购买后登录站内「卡密充值」页面输入兑换码到账。可用模型、计费价格和使用规则以服务站内的最新说明为准。"
     },
     {
       "id": "wangguodazuozhan",
@@ -144,6 +144,14 @@
   ],
   "updates": [
     {
+      "id": "2026-11-12-blessing-api",
+      "date": "2026-11-12",
+      "label": "项目更新",
+      "title": "Blessing API：统一入口，支持卡密充值",
+      "description": "API 服务统一使用 Blessing API 名称与 Hub 图标，提供密钥管理、接入指引、用量查询和五档卡密充值。",
+      "href": "/projects"
+    },
+    {
       "id": "2026-11-11-chinese-history",
       "date": "2026-11-11",
       "label": "项目收录",
@@ -179,8 +187,8 @@
       "id": "2026-10-29-1",
       "date": "2026-10-29",
       "label": "项目收录",
-      "title": "Sub2API 加入项目导航",
-      "description": "通过 Blessing Hub 快速前往现有 AI API 服务。",
+      "title": "Blessing API 加入项目导航",
+      "description": "通过 Blessing Hub 快速前往 Blessing API 服务。",
       "href": "/projects"
     }
   ]
